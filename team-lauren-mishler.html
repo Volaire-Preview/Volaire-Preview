@@ -53,6 +53,8 @@ a { color: var(--blue); }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01s !important; animation-iteration-count: 1 !important; }
+  /* keep the city ticker scrolling — core content, gentle motion */
+  .ticker-track { animation: tick 40s linear infinite !important; }
 }
 
 /* ---------- Header ---------- */

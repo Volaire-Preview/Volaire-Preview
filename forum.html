@@ -53,6 +53,8 @@ a { color: var(--blue); }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01s !important; animation-iteration-count: 1 !important; }
+  /* keep the city ticker scrolling — core content, gentle motion */
+  .ticker-track { animation: tick 40s linear infinite !important; }
 }
 
 /* ---------- Header ---------- */
@@ -714,8 +716,8 @@ footer a:hover { color: #fff; text-shadow: 0 0 14px rgba(159,211,255,0.8); }
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Forum Destinations</span>
-      <h2>Great Conversations Deserve Great Settings</h2>
-      <p>Each year the forum lands somewhere worth the trip. Thank you to everyone who joined us in beautiful San Luis Obispo — and here's a look at the destinations in the running for what's next.</p>
+      <h2>Next Stop: Cleveland</h2>
+      <p>Thank you to everyone who joined us in beautiful San Luis Obispo — and mark your calendars: the 2027 Volaire Air Service Forum is headed to Cleveland.</p>
     </div>
     <div class="loc-grid">
       <div class="loc-panel reveal" data-code="SBP">
@@ -728,48 +730,17 @@ footer a:hover { color: #fff; text-shadow: 0 0 14px rgba(159,211,255,0.8); }
           <p class="loc-note">This year's forum — coastal views, California sun, and a truly energizing event.</p>
         </div>
       </div>
-      <div class="loc-panel reveal d1" data-code="SDL">
-        <img data-fallback src="https://images.pexels.com/photos/19304483/pexels-photo-19304483.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Scottsdale, Arizona">
+      <div class="loc-panel reveal d1" data-code="CLE">
+        <img data-fallback src="https://images.pexels.com/photos/18353982/pexels-photo-18353982.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Cleveland, Ohio">
         <div class="loc-grad"></div>
-        <span class="loc-year">2027 · CANDIDATE</span>
+        <span class="loc-year">2027 · HOST</span>
         <div class="loc-info">
-          <span class="loc-code">SDL</span>
-          <h3>Scottsdale, AZ</h3>
-          <p class="loc-note">Desert resorts, year-round sunshine, and easy connections from every hub.</p>
-        </div>
-      </div>
-      <div class="loc-panel reveal" data-code="CHS">
-        <img data-fallback src="https://images.pexels.com/photos/15789716/pexels-photo-15789716.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Charleston, South Carolina">
-        <div class="loc-grad"></div>
-        <span class="loc-year">2027 · CANDIDATE</span>
-        <div class="loc-info">
-          <span class="loc-code">CHS</span>
-          <h3>Charleston, SC</h3>
-          <p class="loc-note">Historic charm and a hospitality scene built for connection.</p>
-        </div>
-      </div>
-      <div class="loc-panel reveal d1" data-code="SAV">
-        <img data-fallback src="https://images.pexels.com/photos/19694270/pexels-photo-19694270.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Savannah, Georgia">
-        <div class="loc-grad"></div>
-        <span class="loc-year">2027 · CANDIDATE</span>
-        <div class="loc-info">
-          <span class="loc-code">SAV</span>
-          <h3>Savannah, GA</h3>
-          <p class="loc-note">Oak-lined squares and southern warmth, minutes from the airport.</p>
-        </div>
-      </div>
-      <div class="loc-panel reveal d2" data-code="BZN">
-        <img data-fallback src="https://images.pexels.com/photos/17111056/pexels-photo-17111056.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Bozeman, Montana">
-        <div class="loc-grad"></div>
-        <span class="loc-year">2027 · CANDIDATE</span>
-        <div class="loc-info">
-          <span class="loc-code">BZN</span>
-          <h3>Bozeman, MT</h3>
-          <p class="loc-note">Big-sky country — one of America's great air service growth stories.</p>
+          <span class="loc-code">CLE</span>
+          <h3>Cleveland, OH</h3>
+          <p class="loc-note">Lake Erie views and one of aviation's great comeback stories — see you there.</p>
         </div>
       </div>
     </div>
-    <p class="reveal" style="text-align:center;color:#b9cde5;font-size:14px;margin-top:26px;"><em>Candidate destinations are illustrative for this preview — the 2027 location will be announced this fall.</em></p>
   </div>
 </section>
 
@@ -827,7 +798,7 @@ footer a:hover { color: #fff; text-shadow: 0 0 14px rgba(159,211,255,0.8); }
     </div>
 
     <div class="notice reveal">
-      <strong>Preview note:</strong> Pricing shown is placeholder — final tier pricing to be confirmed by Volaire. On the production WordPress site, this page will be powered by The Events Calendar + Event Tickets with live Stripe payment processing, automated confirmation emails and receipts, and CSV attendee export for the marketing team. The checkout below is a non-functional demonstration.
+      <strong>Preview note:</strong> Pricing shown is placeholder — final tier pricing to be confirmed by Volaire. On the production WordPress site, this page will be powered by The Events Calendar + Event Tickets with live Stripe payment processing, a full registration form captured to an attendee database (viewable, exportable to CSV, and usable for printing name badges), automated confirmation emails and receipts, and a hotel room-block booking link for the conference venue. The checkout below is a non-functional demonstration.
     </div>
   </div>
 </section>

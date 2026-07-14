@@ -53,6 +53,8 @@ a { color: var(--blue); }
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
   * { animation-duration: 0.01s !important; animation-iteration-count: 1 !important; }
+  /* keep the city ticker scrolling — core content, gentle motion */
+  .ticker-track { animation: tick 40s linear infinite !important; }
 }
 
 /* ---------- Header ---------- */
@@ -715,15 +717,15 @@ footer a:hover { color: #fff; text-shadow: 0 0 14px rgba(159,211,255,0.8); }
       </div>
       <div class="board">
         <div class="board-row head"><span>CODE</span><span>NAME</span><span>ASSIGNMENT</span><span>STATUS</span></div>
+        <div class="board-row" data-href="team-kris-nichter.html" role="link" tabindex="0"><span class="code">VA-05</span><span>K. NICHTER</span><span>EXECUTIVE DIRECTOR</span><span class="status">ON DUTY</span></div>
+        <div class="board-row" data-href="team-melissa-galvan-peterson.html" role="link" tabindex="0"><span class="code">VA-08</span><span>M. GALVAN PETERSON</span><span>SR. CONSULTANT · MKTG</span><span class="status">ON DUTY</span></div>
+        <div class="board-row" data-href="team-dan-cohn.html" role="link" tabindex="0"><span class="code">VA-07</span><span>D. COHN</span><span>DIRECTOR · ASD</span><span class="status">ON DUTY</span></div>
+        <div class="board-row" data-href="team-lauren-mishler.html" role="link" tabindex="0"><span class="code">VA-09</span><span>L. MISHLER</span><span>CREATIVE DEV. MANAGER</span><span class="status">ON DUTY</span></div>
+        <div class="board-row" data-href="team-michael-mooney.html" role="link" tabindex="0"><span class="code">VA-06</span><span>M. MOONEY</span><span>PARTNER EMERITUS · ASD</span><span class="status">ON DUTY</span></div>
         <div class="board-row" data-href="team-jack-penning.html" role="link" tabindex="0"><span class="code">VA-01</span><span>J. PENNING</span><span>MANAGING PARTNER</span><span class="status">ON DUTY</span></div>
         <div class="board-row" data-href="team-michael-lum.html" role="link" tabindex="0"><span class="code">VA-02</span><span>M. LUM</span><span>MANAGING PARTNER</span><span class="status">ON DUTY</span></div>
         <div class="board-row" data-href="team-tim-sieber.html" role="link" tabindex="0"><span class="code">VA-03</span><span>T. SIEBER</span><span>MANAGING PARTNER</span><span class="status">ON DUTY</span></div>
         <div class="board-row" data-href="team-jeffrey-hayes.html" role="link" tabindex="0"><span class="code">VA-04</span><span>J. HAYES</span><span>MANAGING PARTNER</span><span class="status">ON DUTY</span></div>
-        <div class="board-row" data-href="team-kris-nichter.html" role="link" tabindex="0"><span class="code">VA-05</span><span>K. NICHTER</span><span>EXECUTIVE DIRECTOR</span><span class="status">ON DUTY</span></div>
-        <div class="board-row" data-href="team-michael-mooney.html" role="link" tabindex="0"><span class="code">VA-06</span><span>M. MOONEY</span><span>PARTNER EMERITUS · ASD</span><span class="status">ON DUTY</span></div>
-        <div class="board-row" data-href="team-dan-cohn.html" role="link" tabindex="0"><span class="code">VA-07</span><span>D. COHN</span><span>DIRECTOR · ASD</span><span class="status">ON DUTY</span></div>
-        <div class="board-row" data-href="team-melissa-galvan-peterson.html" role="link" tabindex="0"><span class="code">VA-08</span><span>M. GALVAN PETERSON</span><span>SR. CONSULTANT · MKTG</span><span class="status">ON DUTY</span></div>
-        <div class="board-row" data-href="team-lauren-mishler.html" role="link" tabindex="0"><span class="code">VA-09</span><span>L. MISHLER</span><span>CREATIVE DEV. MANAGER</span><span class="status">ON DUTY</span></div>
       </div>
     </div>
   </div>
@@ -732,58 +734,58 @@ footer a:hover { color: #fff; text-shadow: 0 0 14px rgba(159,211,255,0.8); }
 <section class="section fuselage-section">
   <div class="container">
     <div class="team-grid">
-      <div class="team-card reveal" id="tm-penning">
-        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/Penning_Web.jpg" alt="Jack Penning"></div>
-        <div class="info"><h3>Jack Penning</h3><p class="role">Managing Partner</p>
-          <a class="learn-more" href="team-jack-penning.html">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card reveal d1" id="tm-lum">
-        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/Lum3-1.jpg" alt="Michael Lum"></div>
-        <div class="info"><h3>Michael Lum</h3><p class="role">Managing Partner</p>
-          <a class="learn-more" href="team-michael-lum.html">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card reveal d2" id="tm-sieber">
-        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2022/10/50394052_2253851541321163_2573656322020999168_n-e1664818519328.jpg" alt="Tim Sieber"></div>
-        <div class="info"><h3>Tim Sieber</h3><p class="role">Managing Partner</p>
-          <a class="learn-more" href="team-tim-sieber.html">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card reveal" id="tm-hayes">
-        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2018/11/hayes-5x5-crop-300x300-square.jpg" alt="Jeffrey Hayes"></div>
-        <div class="info"><h3>Jeffrey Hayes</h3><p class="role">Managing Partner</p>
-          <a class="learn-more" href="team-jeffrey-hayes.html">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card reveal d1" id="tm-nichter">
+      <div class="team-card reveal" id="tm-nichter">
         <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/RH1_7749.jpg" alt="Kris Nichter"></div>
         <div class="info"><h3>Kris Nichter</h3><p class="role">Executive Director</p>
           <a class="learn-more" href="team-kris-nichter.html">Learn More</a>
         </div>
       </div>
-      <div class="team-card reveal d2" id="tm-mooney">
-        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/Mooney_Website.jpg" alt="Michael Mooney"></div>
-        <div class="info"><h3>Michael Mooney</h3><p class="role">Partner Emeritus / Sr. Consultant, Air Service Development</p>
-          <a class="learn-more" href="team-michael-mooney.html">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card reveal" id="tm-cohn">
-        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2026/04/Dan-Headshot-2-web.gif" alt="Dan Cohn"></div>
-        <div class="info"><h3>Dan Cohn</h3><p class="role">Director, Air Service Development</p>
-          <a class="learn-more" href="team-dan-cohn.html">Learn More</a>
-        </div>
-      </div>
-      <div class="team-card reveal d2" id="tm-galvan">
+      <div class="team-card reveal d1" id="tm-galvan">
         <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/RH1_7778_350.jpg" alt="Melissa Galvan Peterson"></div>
         <div class="info"><h3>Melissa Galvan Peterson</h3><p class="role">Senior Consultant, Marketing &amp; Development</p>
           <a class="learn-more" href="team-melissa-galvan-peterson.html">Learn More</a>
+        </div>
+      </div>
+      <div class="team-card reveal d2" id="tm-cohn">
+        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2026/04/Dan-Headshot-2-web.gif" alt="Dan Cohn"></div>
+        <div class="info"><h3>Dan Cohn</h3><p class="role">Director, Air Service Development</p>
+          <a class="learn-more" href="team-dan-cohn.html">Learn More</a>
         </div>
       </div>
       <div class="team-card reveal" id="tm-mishler">
         <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/RH1_7810-894x1024.jpg" alt="Lauren Mishler"></div>
         <div class="info"><h3>Lauren Mishler</h3><p class="role">Creative Development Manager</p>
           <a class="learn-more" href="team-lauren-mishler.html">Learn More</a>
+        </div>
+      </div>
+      <div class="team-card reveal d1" id="tm-mooney">
+        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/Mooney_Website.jpg" alt="Michael Mooney"></div>
+        <div class="info"><h3>Michael Mooney</h3><p class="role">Partner Emeritus / Sr. Consultant, Air Service Development</p>
+          <a class="learn-more" href="team-michael-mooney.html">Learn More</a>
+        </div>
+      </div>
+      <div class="team-card reveal d2" id="tm-penning">
+        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/Penning_Web.jpg" alt="Jack Penning"></div>
+        <div class="info"><h3>Jack Penning</h3><p class="role">Managing Partner</p>
+          <a class="learn-more" href="team-jack-penning.html">Learn More</a>
+        </div>
+      </div>
+      <div class="team-card reveal" id="tm-lum">
+        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2019/05/Lum3-1.jpg" alt="Michael Lum"></div>
+        <div class="info"><h3>Michael Lum</h3><p class="role">Managing Partner</p>
+          <a class="learn-more" href="team-michael-lum.html">Learn More</a>
+        </div>
+      </div>
+      <div class="team-card reveal d1" id="tm-sieber">
+        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2022/10/50394052_2253851541321163_2573656322020999168_n-e1664818519328.jpg" alt="Tim Sieber"></div>
+        <div class="info"><h3>Tim Sieber</h3><p class="role">Managing Partner</p>
+          <a class="learn-more" href="team-tim-sieber.html">Learn More</a>
+        </div>
+      </div>
+      <div class="team-card reveal d2" id="tm-hayes">
+        <div class="photo"><img src="https://www.volaireaviation.com/wp-content/uploads/2018/11/hayes-5x5-crop-300x300-square.jpg" alt="Jeffrey Hayes"></div>
+        <div class="info"><h3>Jeffrey Hayes</h3><p class="role">Managing Partner</p>
+          <a class="learn-more" href="team-jeffrey-hayes.html">Learn More</a>
         </div>
       </div>
     </div>
